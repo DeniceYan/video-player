@@ -1,0 +1,215 @@
+/* 样式*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*视频样式*/
+.videoBox{
+  position: relative;
+}
+.videoBox,.video0{
+  width: 100%;
+  height: 100%;
+}
+.controlBar{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background-color: #000;
+  opacity: .8;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
+  filter: alpha(opacity=80);
+}
+.btn{
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+.pre{
+  width: 0.19rem;
+  margin-left: 0.2rem;
+  margin-top: 0.13rem;
+}
+.play{
+  width: 0.17rem;
+  margin-left: 0.15rem;
+  margin-top: 0.06rem;
+}
+.next{
+  width: 0.19rem;
+  margin-left: 0.15rem;
+  margin-top: 0.13rem;
+}
+.progressBox{
+  position: relative;
+  width: 7.2rem;
+  height: 0.05rem;
+  border: 0.01rem solid #e6e6e6;
+  margin-left: 0.3rem;
+  margin-top: 0.16rem;
+}
+.progress{
+  display: block;
+  width: 0;
+  height: 0.05rem;
+  background: #fff;
+}
+.barPoint{
+  display: block;
+  position: absolute;
+  left: -0.025rem;
+  top: -0.025rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  background-color: red;
+  border-radius: 50%;
+}
+.videotime{
+  display: block;
+  float: left;
+  color: #fff;
+  font-size: 0.14rem;
+  margin-left: 0.15rem;
+}
+.volumeBox{
+  position: relative;
+  margin-left: 0.3rem;
+}
+.volume{
+  display: block;
+  float: left;
+  width: 0.23rem;
+  margin-top: 0.08rem;
+}
+
+.volume-main{
+  display: block;
+  float: left;
+}
+/*音量横向样式*/
+
+.volume-progress{
+  position: relative;
+  display: inline-block;
+  width: 1.2rem;
+  height: 0.05rem;
+  border: 0.01rem solid #e6e6e6;
+  margin-left: 0.1rem;
+  margin-top: 0.16rem;
+}
+.volume-bar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 50%;
+  height: 0.05rem;
+  background: #fff;
+}
+/*音量竖向样式*/
+.l-box{
+  position: absolute;
+  left: -0.1rem;
+  bottom: 0.28rem;
+  width: 0.34rem;
+  height: 1rem;
+  background: #000;
+  opacity: .8;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
+  filter: alpha(opacity=80);
+  cursor: auto;
+}
+.volume-up{
+  position: absolute;
+  left: 0.16rem;
+  bottom: 0.1rem;
+  width: 0.05rem;
+  height: 0.8rem;
+  border: 0.01rem solid #e6e6e6;
+  overflow: hidden;
+}
+.bar-up{
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  width: 0.6rem;
+  height: 100%;
+  background: #fff;
+}
+
+.playRate{
+  position: relative;
+  font-size: 0.14rem;
+  color: #fff;
+  margin-left: 0.4rem;
+}
+.current-rate{
+  padding: 0 0.05rem;
+}
+.rateBox{
+  display: none;
+  position: absolute;
+  left: -0.3rem;
+  bottom: 0.4rem;
+  width: 0.8rem;
+  height: 1rem;
+  background: #000;
+  opacity: .8;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
+  filter: alpha(opacity=80);
+  text-align: center;
+}
+.rateBox li{
+  line-height: 0.25rem;
+}
+.rateBox li:hover{
+  background: #fff;
+  color: #333;
+}
+
+.fullscreen{
+  float: right;
+  width: 0.22rem;
+  margin-right: 0.2rem;
+  margin-top: 0.09rem;
+}
+
+.video-full{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 990;
+}
+
+.waiting-gif{
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  z-index: 999;
+}
+
+
+/*音量竖排时*/
+.more-progress{
+  width: 8.5rem;
+}
+
+/*公共样式*/
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+li{
+  list-style: none;
+}

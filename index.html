@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频DEMO</title>
+    <link href="css/video.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="videoBox">
+        <video id="myVideo" src="video/oceans.mp4" poster="video/m.png" class="video0" webkit-playsinline playsinline></video>
+        <div class="controlBar">
+            <img class="pre btn" src="img/pre.png" />
+            <img class="play btn" src="img/noplay.png" />
+            <img class="next btn" src="img/next.png" />
+            <div class="progressBox btn more-progress" id="progressBar">
+                <span class="progress" id="progress"></span>
+                <span class="barPoint" id="barPoint"></span>
+            </div>
+            <p class="videotime"><span id="currentTime">00:00</span>/<span id="duration">10:03</span></p>
+            <div class="volumeBox btn">
+                <img class="volume" src="img/volume.png" />
+                <div class="volume-main">
+                    <div class="btn" id="volumeProgress">
+                        <span class="" id="volumeBar"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="playRate btn">
+                <span class="current-rate">1x</span>
+                <ul class="rateBox">
+                    <li rate="2">2x</li>
+                    <li rate="1.5">1.5x</li>
+                    <li rate="1">1x</li>
+                    <li rate="0.5">0.5x</li>
+                </ul>
+            </div>
+            <img class="fullscreen btn" src="img/fullscreen.png" />
+        </div>
+        <img class="waiting-gif hide" src="img/waiting.gif" />
+    </div>
+    <script src="js/video.js"></script>
+    <script>
+        $(function(){
+            // 基于设计尺寸的宽度，将宽度看成100等分，便于计算
+            var width = 1280;
+            function resetSize(){
+                document.documentElement.style.fontSize = document.documentElement.getBoundingClientRect().width / (width / 100) + 'px';
+            }
+
+            resetSize();
+            window.onresize=function(){
+                resetSize();
+            }
+
+            new VideoPlayer({
+                volumeDirection: true // 音量横竖排设置，true为横排，false为竖排
+//                playRate: 2 // 修改播放速度
+            });
+        });
+    </script>
+</body>
+</html>
